@@ -8,6 +8,13 @@
       "when": 1751993352234,
       "tag": "0000_boring_sunfire",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1752077293180,
+      "tag": "0001_mysterious_toro",
+      "breakpoints": true
     }
   ]
 }

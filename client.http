@@ -10,5 +10,37 @@ GET {{baseUrl}}/health
 ###
 
 # Get rooms
-
+# @name getRooms
 GET {{baseUrl}}/rooms
+
+###
+
+# Create room
+# @name createRooms
+POST {{baseUrl}}/rooms
+Content-Type: application/json
+
+{
+    "name": "teste",
+    "description": "teste1234"
+}
+
+###
+
+@roomId = {{createRooms.response.body.$.roomId}}
+
+# Get room questions
+# @name getRoomQuestions
+GET {{baseUrl}}/rooms/{{roomId}}/questions
+
+###
+
+# Create question
+# @name createQuestion
+
+POST {{baseUrl}}/rooms/{{roomId}}/questions
+Content-Type: application/json
+
+{
+    "question" : "quanto é 12 + 10"
+}
